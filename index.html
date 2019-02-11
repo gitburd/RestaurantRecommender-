@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <style>
+    /* #displayUsersList{
+      visibility: hidden;
+    } */
+    .red-text {
+      color: #FF0000;
+    }
+
+    .restaurant-name{
+      font-size: 20px;
+    } 
+
+    .wtw{
+      color:red;
+    }
+  
+    </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-dark bg-dark" style="padding-right:100px;">
+        <a class="navbar-brand" href="#" >Navbar</a>
+    <div style="float:right">
+         <div class="dropdown" style="float:right;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" padding-right:20px;">
+              Login 
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <form class="px-4 py-3">
+                    <h3>Login</h3>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Username</label>
+                    <input type="email" class="form-control" id="username" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <label for="username">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                  </div>
+               
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">New around here? Sign up</a>
+                <a class="dropdown-item" href="#">Forgot password?</a>
+             
+            </div>
+          </div>
+           
+            <div class="dropdown" style="float:right" >
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right:20px;">
+                Sign Up 
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:300px;">
+                    <form class="px-4 py-3">
+                        <h3>Sign Up</h3>
+                      <div class="form-group">
+                        <label for="newUser">Username</label>
+                        <input  id="newUser" type="text" class="form-control"  placeholder="Username">
+                      </div>
+                      <div class="form-group">
+                        <label for="newUser">Password</label>
+                        <input type="password" class="form-control" id="newUserPassword" placeholder="Password">
+                      </div>
+                     
+                      <button id="signUpBtn" type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                  
+              </div>
+              </div>
+              <!-- mine? -->
+              
+          </nav>
+
+
+  <h2 >Restaurants</h2>
+  <button id="displayRestaurantsBtn"  > Display Restaurants </button>
+  <ul id='displayRestaurantsList' class='restaurant-name'></ul>
+
+  <h2 >Users</h2>
+  <button id="displayUsersBtn"> Display Users </button>
+  <ul id="displayUsersList" >
+    </ul>
+  <button id="displayRatingsBtn"> Display Ratings </button>
+  <h2>Ratings</h2>
+
+  <ul id ='displayRatingsList'></ul>
+
+
+
+
+<!-- not done yet -->
+<button id="filter-button"> filter </button>
+
+<!-- (options resturants, users, ??) -->
+
+
+
+<!-- display:  -->
+
+
+
+<ul id ='displayAll'></ul>
+
+
+
+
+
+
+  <br>
+  <br>
+
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <input id="addRestaurantFormName" type="text" class="form-control" placeholder="Restaurant Name" >
+      </div>
+      <div class="col">
+        <input id="addRestaurantFormCategory" type="text" class="form-control" placeholder="Category" >
+      </div>
+    </div>
+  </form>
+
+  <button id="addRestaurantBtn"> Add Restaurant </button>
+<br>
+<br>
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <input id="removeRestaurantFormName" type="text" class="form-control" placeholder="Restaurant Name" style="width:50%">
+      </div>
+    
+  </form>
+  <button id="removeRestaurantBtn"> Remove Restaurant </button>
+
+
+<!-- <form>
+  <div class="form-group">
+    <h2>Login</h2>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width:25%">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width:25%">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
